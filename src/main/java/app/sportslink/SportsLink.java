@@ -13,7 +13,7 @@ public class SportsLink extends Application {
     private static Stage _stage = null;
 
 
-// new changes
+// new
     public static class SceneData{
         public final String FILE;
         public final String TITLE;
