@@ -1,0 +1,44 @@
+CREATE TABLE IF NOT EXISTS `users` (
+`user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+`username` VARCHAR(20) NOT NULL,
+`email` VARCHAR(320) NOT NULL,
+`password` VARCHAR(64) NOT NULL,
+`firstname` VARCHAR(40) NOT NULL,
+`lastname` VARCHAR(40) NOT NULL,
+`zipcode` CHAR(5) NOT NULL,
+`visibility` TINYINT UNSIGNED NOT NULL DEFAULT 1,
+`confirm_code` CHAR(4) NOT NULL DEFAULT '0000',
+`confirmed` BOOLEAN NOT NULL DEFAULT 0,
+`ts_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY(`user_id`),
+UNIQUE(`username`),
+UNIQUE(`email`)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `sports` (
+`sport_id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+`sport` VARCHAR(40) NOT NULL,
+PRIMARY KEY(`sport_id`),
+UNIQUE(`sport`)
+) ENGINE = InnoDB;
+
+INSERT INTO `sports` (`sport`) VALUES ('Running'), ('Basketball'), ('Baseball'), ('Tennis'), ('Volleyball'), ('Soccer'), ('Football');
+
+
+CREATE TABLE IF NOT EXISTS `events` (
+`event_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+`creator_id` INT UNSIGNED NOT NULL,
+`sport_id` SMALLINT UNSIGNED NOT NULL,
+`level` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+`ts_scheduled` TIMESTAMP NOT NULL,
+`zipcode` CHAR(5) NOT NULL,
+`place` VARCHAR(255) NOT NULL,
+`max_users` INT UNSIGNED NOT NULL,
+`num_users` INT UNSIGNED NOT NULL DEFAULT 1,
+`current_users` TEXT NOT NULL,
+`ts_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY(`event_id`),
+INDEX(`creator_id`),
+INDEX(`sport_id`)
+) ENGINE = InnoDB;

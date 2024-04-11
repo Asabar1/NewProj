@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="437.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.sportslink.CtrlUnconfirmed">
+    <children>
+        <Button fx:id="button_logout" alignment="CENTER" contentDisplay="CENTER" layoutX="336.0" layoutY="259.0" mnemonicParsing="false" style="-fx-background-color: #FED600;" text="Login">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label fx:id="label_welcome" alignment="CENTER" layoutX="268.0" layoutY="159.0" text="Welcome to SportsLink">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="label_fav_sports" layoutX="201.0" layoutY="194.0" prefHeight="27.0" prefWidth="675.0" text="New user account is created successfully. " wrapText="true">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@logo.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="label_fav_sports1" layoutX="211.0" layoutY="221.0" prefHeight="27.0" prefWidth="675.0" text="Please log in to enter the application." wrapText="true">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

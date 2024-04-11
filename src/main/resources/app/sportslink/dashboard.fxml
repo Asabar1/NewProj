@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.sportslink.CtrlDashboard">
+   <children>
+      <AnchorPane prefHeight="499.0" prefWidth="143.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="499.0" prefWidth="477.0">
+         <children>
+            <TabPane layoutX="31.0" layoutY="71.0" prefHeight="282.0" prefWidth="416.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Search">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="8.0" layoutY="26.0" text="Sports" />
+                              <Label layoutX="231.0" layoutY="26.0" text="Zip code" />
+                              <Button fx:id="button_show_activity_events" layoutX="134.0" layoutY="123.0" mnemonicParsing="false" text="Show Activity Events" />
+                              <ComboBox fx:id="cb_sports" layoutX="51.0" layoutY="24.0" prefHeight="25.0" prefWidth="69.0" promptText="Any" />
+                              <ComboBox fx:id="cb_levels" layoutX="124.0" layoutY="24.0" prefHeight="25.0" prefWidth="97.0" promptText="Any level" />
+                              <TextField fx:id="tf_zip_code" layoutX="283.0" layoutY="24.0" prefHeight="25.0" prefWidth="57.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Notification">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="30.0" prefHeight="17.0" prefWidth="237.0" text=" Users invited you to the following events:" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Scheduled">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="History">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="191.0" prefWidth="369.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Preference">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="398.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Edit Account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="416.0">
+                           <children>
+                              <AnchorPane layoutX="23.0" layoutY="14.0" prefHeight="182.0" prefWidth="376.0">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="7.0" text="First Name:" />
+                                    <TextField fx:id="tf_first_name" layoutX="121.0" layoutY="5.0" />
+                                    <Label layoutX="9.0" layoutY="39.0" text="Last Name:" />
+                                    <TextField fx:id="tf_last_name" layoutX="120.0" layoutY="36.0" />
+                                    <Label layoutX="10.0" layoutY="69.0" text="Email Address" />
+                                    <TextField fx:id="tf_email_address" layoutX="121.0" layoutY="66.0" />
+                                    <Label layoutX="10.0" layoutY="98.0" text="US zip code:" />
+                                    <TextField fx:id="tf_us_zip_code" layoutX="120.0" layoutY="95.0" />
+                                    <Label layoutX="10.0" layoutY="130.0" text="User Name:" />
+                                    <TextField fx:id="tf_username" layoutX="120.0" layoutY="124.0" />
+                                    <Label layoutX="11.0" layoutY="158.0" text="Password:" />
+                                    <PasswordField fx:id="tf_password" layoutX="119.0" layoutY="152.0" />
+                                    <Label layoutX="10.0" layoutY="185.0" text="Re-Type Password:" />
+                                    <PasswordField fx:id="tf_password_1" layoutX="119.0" layoutY="181.0" />
+                                    <Label layoutX="10.0" layoutY="215.0" text="Profile Visibility:" />
+                                    <ComboBox fx:id="tf_profile_visibility" layoutX="121.0" layoutY="210.0" prefWidth="150.0" promptText="Public (recommended)" />
+                                    <Button fx:id="button_apply" layoutX="292.0" layoutY="211.0" mnemonicParsing="false" text="Apply" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
